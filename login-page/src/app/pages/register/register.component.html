@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row-justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg p-4 mt-5 mb-6">
+        <h1>Welcome here</h1><hr>
+        <div [ngClass]="className" role="alert">
+         {{message}} <a routerLink="/login" class="text-primary" style="cursor : pointer">Login here</a>
+
+        </div>
+        <form [formGroup] ="signupForm"  class="text-left">
+        <div class="form-group">
+          <label>
+            Display name
+          </label>
+          <input type="text" class="form-control" placeholder="username" formControlName="displayName">
+          <label>
+            Email
+          </label>
+          <input type="email" class="form-control" placeholder="Email" formControlName="email">
+
+          <label>
+            lastname
+          </label>
+          <input type="text" class="form-control" placeholder="lastname" formControlName="lastname">
+
+          <label>
+            Password
+          </label>
+          <input type="password" class="form-control" placeholder="**********" formControlName="password">
+
+          <label>
+            Address line 1
+          </label>
+          <input type="text" class="form-control" placeholder="Address line 1" formControlName="addressLine1">
+
+          <label>
+            City
+          </label>
+          <input type="text" class="form-control" placeholder="City" formControlName="city">
+
+          <label>
+            State
+          </label>
+          <input type="text" class="form-control" placeholder="State" formControlName="state">
+
+          <label>
+            Postal pincode
+          </label>
+          <input type="text" class="form-control" placeholder="Postal pincode" formControlName="postalCode">
+        </div><br>
+        <button class="btn btn-outline-primary btn-block" (click)="signup()">Create Account</button>
+      </form>
+    </div>
+  </div>
+</div>

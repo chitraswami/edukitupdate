@@ -1,0 +1,38 @@
+
+<div class="container mt-2">
+  <div class="row-justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg p-4 mt-5 mb-6">
+
+        <form [formGroup] ="EditAddressForm" (ngSubmit)="onSubmit()" class="text-left">
+        <div class="form-group">
+
+          <label>
+            Address line 1
+          </label>
+          <input type="text" class="form-control" placeholder="Address line 1" formControlName="addressLine1">
+
+          <label>
+            City
+          </label>
+          <input type="text" class="form-control" placeholder="City" formControlName="city">
+
+          <label>
+            State
+          </label>
+          <input type="text" class="form-control" placeholder="State" formControlName="state">
+
+          <label>
+            Postal pincode
+          </label>
+          <input type="text" class="form-control" placeholder="Postal pincode" formControlName="postalCode">
+
+        </div><br>
+        <button class="btn btn-primary">Submit</button>
+        <!-- <button class="btn btn-outline-primary btn-block" (click)="update()">Update</button> -->
+
+      </form>
+    </div>
+  </div>
+
+</div>
